@@ -3,6 +3,7 @@ font-family: 'Roboto', sans-serif; */
 
 /*Topo*/
 
+@media (max-width: 612px) {
 body {
     background-color: #EEEEEE;
 }
@@ -47,21 +48,45 @@ body {
 /*Fim Topo*/
 
 .page{
-    background-color: aqua;
-    margin-top: 96px;
-    width: 100%;
+    margin-top: 123px;
     height: 842px;
+
 }
 .title{
     font-family: 'Righteous', cursive;
     font-style: regular;
     font-size: 26px;
-    line-height: 100%;
+    line-height: 512px;
     letter-spacing: 1.8%;
+    background-color: blue;
+    height: 27px;
 }
 .option{
-    margin-top: 27px;
-    height: 260px;
-    width: 100%;
+    height: 250px;
+    width: 612px;
     background-color: red;
+
+}
+.title h1{
+    margin-bottom: 17px;
+}
+.dishes{
+    display: flex;
+    overflow-x:scroll;
+    justify-content: left;
+    height: 224px;
+    align-items: end;
+    overflow: scroll;
+    background-color: purple;
+}
+.dish{
+    background-color: green;
+    height: 202px;
+    width: 172px;
+    width: 100%;
+    border-radius: 9px;
+    margin-left: 19px;
+    filter:drop-shadow(0,0,0,0.25)
+}
+
 }
