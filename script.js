@@ -1,6 +1,7 @@
-const food =0;
-const drink = 0;
-const desert = 0;
+let drink;
+let drinkname;
+let desert;
+let desertname;
 const frango = 14.90;
 const carne = 20.90;
 const trio = 19.90;
@@ -17,55 +18,41 @@ const bolo = 5.90;
 const sorvete = 5;
 const doce = 6.90;
 
-function foodselect1(food) {
-    food = 14.90;
-    return food;
-}
-function foodselect2(food) {
-    food = 22.90;
-}
-function foodselect3(trio) {
-    food = trio;
-}
-function foodselect4(batata) {
-    food = batata;
-}
-function foodselect5(lasanha) {
-    food = lasanha;
-}
-function drinkselect1(coca) {
-    drink = coca;
-}
-function drinkselect2(guarana) {
-    drink = guarana;
+function foodselect(food) {
+    const botaoanterior = document.querySelector('.selected');
+    if (botaoanterior !== null) {
+        botaoanterior.classList.remove('.selected');
+    }
+
+    const botao = document.querySelector(food);
+    botao.classList.add('selected');
 }
 
-function drinkselect3(fanta) {
-    drink = fanta;
-}
 
-function drinkselect4(coca2) {
-    drink = coca2;
-}
+function drinkselect(drink) {
+    const botaoanterior = document.querySelector('.selected');
+    if (botaoanterior !== null) {
+        botaoanterior.classList.remove('.selected')
 
-function drinkselect5(guarana2) {
-    drink = guarana2;
-}
-function desertselect1(pudim){
-    desert=pudim;
-}
-function desertselect2(brigadeiro){
-    desert=brigadeiro
-}
-function desertselect3(bolo){
-    desert=bolo;
-}
-function desertselect4(sorvete){
-    desert=sorvete;
-}
-function desertselect5(doce){
-    desert=doce;
-}
+        const botao = document.querySelector(drink);
+        botao.classList.add('selected');
+    }}
 
-const total=food+drink+desert;
+
+    function desertselect(desert) {
+        const botaoanterior = document.querySelector('.selected');
+        if (botaoanterior !== null) {
+            botaoanterior.classList.remove('.selected')
+
+            const botao = document.querySelector(desert);
+            botao.classList.add('selected');
+        }}
+
+
+        function final() {
+            const total = food + drink + desert;
+            alert(total.toFixed(2))
+        }
+
+
 

@@ -97,7 +97,21 @@ body {
     border-radius: 9px;
     border: 1px solid rgb(73, 2, 26);
     filter: drop-shadow(2px 4px 4px rgba(41, 2, 26, 0.534));
+    cursor: pointer;
 }
+
+.selected {
+    border: 3px solid purple;
+}
+
+.food img{
+    width: 95%;
+    height: 87px;
+    border-radius: 9px;
+    filter: drop-shadow(2px 4px 4px rgba(41, 2, 26, 0.534));
+
+}
+
 
 .foodname {
     width: 144px;
