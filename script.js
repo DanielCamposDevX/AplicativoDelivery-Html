@@ -1,7 +1,4 @@
-const food =0;
-const drink = 0;
-const desert = 0;
-
+const frango = 14.90;
 const carne = 20.90;
 const trio = 19.90;
 const batata = 15.90;
@@ -17,54 +14,67 @@ const bolo = 5.90;
 const sorvete = 5;
 const doce = 6.90;
 
-function foodselect1() {
-  document.getElementById("frango").style.border="3px solid purple"
-}
-function foodselect2(food) {
-    food = 22.90;
-}
-function foodselect3(trio) {
-    food = trio;
-}
-function foodselect4(batata) {
-    food = batata;
-}
-function foodselect5(lasanha) {
-    food = lasanha;
-}
-function drinkselect1(coca) {
-    drink = coca;
-}
-function drinkselect2(guarana) {
-    drink = guarana;
+function foodselect(food) {
+    const botaoanterior = document.querySelector('.foods .selected');
+    console.log(botaoanterior);
+    if (botaoanterior !== null) {
+        botaoanterior.classList.remove('selected');
+    }
+
+    const botao = document.querySelector(food);
+    botao.classList.add('selected');
 }
 
-function drinkselect3(fanta) {
-    drink = fanta;
+
+function drinkselect(drink) {
+    const botaoanterior = document.querySelector('.drinks .selected');
+    console.log(botaoanterior);
+    if (botaoanterior !== null) {
+        botaoanterior.classList.remove('selected');
+    }
+    const botao = document.querySelector(drink);
+    botao.classList.add('selected');
 }
 
-function drinkselect4(coca2) {
-    drink = coca2;
+
+function desertselect(desert) {
+    const botaoanterior = document.querySelector('.deserts .selected');
+    console.log(botaoanterior);
+    if (botaoanterior !== null) {
+        botaoanterior.classList.remove('selected');
+    }
+    const botao = document.querySelector(desert);
+    botao.classList.add('selected');
 }
 
-function drinkselect5(guarana2) {
-    drink = guarana2;
-}
-function desertselect1(pudim){
-    desert=pudim;
-}
-function desertselect2(brigadeiro){
-    desert=brigadeiro
-}
-function desertselect3(bolo){
-    desert=bolo;
-}
-function desertselect4(sorvete){
-    desert=sorvete;
-}
-function desertselect5(doce){
-    desert=doce;
+
+function final() {
+    const food = document.querySelector('.foods .selected .preco h2 ');
+    const drink = document.querySelector('.drinks .selected .preco h2');
+    const desert = document.querySelector('.deserts .selected .preco h2');
+    const foodname = document.querySelector('.foods .selected .foodname h1');
+    const drinkname = document.querySelector('.drinks .selected .foodname h1');
+    const desertname = document.querySelector('.deserts .selected .foodname h1');
+    const total = Number(food.innerHTML) + Number(drink.innerHTML) + Number(desert.innerHTML);
+    console.log(total.toFixed(2));
+    console.log(foodname)
+    document.querySelector('.confirm').style.display = "flex";
+    let name1 = document.querySelector('.confirm .box .op .fo');
+    let name2 = document.querySelector('.confirm .box .op .dr');
+    let name3 = document.querySelector('.confirm .box .op .de');
+    name1.innerHTML= foodname.innerHTML;
+    name2.innerHTML= drinkname.innerHTML;
+    name3.innerHTML=desertname.innerHTML;
+    let p1 = document.querySelector('.confirm .box .op .fop');
+    let p2 = document.querySelector('.confirm .box .op .drp');
+    let p3 = document.querySelector('.confirm .box .op .dep');
+    p1.innerHTML= food.innerHTML;
+    p2.innerHTML= drink.innerHTML;
+    p3.innerHTML=desert.innerHTML;
+    let tot=document.querySelector('.confirm .box .op .total');
+    tot.innerHTML=total.toFixed(2);
 }
 
-const total=food+drink+desert;
+
+
 
