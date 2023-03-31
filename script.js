@@ -1,7 +1,7 @@
 const food =0;
 const drink = 0;
 const desert = 0;
-const frango = 14.90;
+
 const carne = 20.90;
 const trio = 19.90;
 const batata = 15.90;
@@ -17,9 +17,8 @@ const bolo = 5.90;
 const sorvete = 5;
 const doce = 6.90;
 
-function foodselect1(food) {
-    food = 14.90;
-    return food;
+function foodselect1() {
+  document.getElementById("frango").style.border="3px solid purple"
 }
 function foodselect2(food) {
     food = 22.90;

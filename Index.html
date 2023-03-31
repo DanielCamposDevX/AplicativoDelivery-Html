@@ -28,7 +28,7 @@
                 <h1>Primeiro, seu prato</h1>
             </div>
             <div class="dishes">
-                <button onclick= "foodselect1(food)" class="dish">
+                <button id="frango" class="dish" onclick="foodselect1()">
                     <div class="food"><img src="./frango_yin_yang.png" /></div>
                     <div class="foodname">
                         <h1>Frango Yin Yang</h1>
@@ -36,28 +36,28 @@
                         <h2>R$ 14.90</h2>
                     </div>
                 </button>
-                <button onclick= "foodselect2()" class="dish">
+                <button onclick="foodselect2()" class="dish">
                     <div class="food"><img src="./frango_yin_yang.png" /></div>
                     <div class="foodname">
                         <h1>Carne de Panela</h1>
                         <p>Carne com tempero Caseiro</p>
                         <h2>R$ 20.90</h2>
                     </div>
-                </button> <button onclick= "foodselect3()" class="dish">
+                </button> <button onclick="foodselect3()" class="dish">
                     <div class="food"><img src="./frango_yin_yang.png" /></div>
                     <div class="foodname">
                         <h1>Trio Mineiro</h1>
                         <p>Mandioca, Torresmo e Linguiça</p>
                         <h2>R$ 19.90</h2>
                     </div>
-                </button> <button onclick= "foodselect4()" class="dish">
+                </button> <button onclick="foodselect4()" class="dish">
                     <div class="food"><img src="./frango_yin_yang.png" /></div>
                     <div class="foodname">
                         <h1>Batata Frita</h1>
                         <p>Batata Frita Crocante temperada</p>
                         <h2>R$ 15.90</h2>
                     </div>
-                </button> <button onclick= "foodselect5()" class="dish">
+                </button> <button onclick="foodselect5()" class="dish">
                     <div class="food"><img src="./frango_yin_yang.png" /></div>
                     <div class="foodname">
                         <h1>Lasanha</h1>
@@ -72,7 +72,7 @@
                 <h1>Agora, sua bebida</h1>
             </div>
             <div class="dishes">
-                <button onclick= "drinkselect1()" class="dish">
+                <button onclick="drinkselect1()" class="dish">
                     <div class="food"><img src="./coca-cola.png" /></div>
                     <div class="foodname">
                         <h1>Coca cola Lata</h1>
@@ -80,7 +80,7 @@
                         <h2>R$ 4.90</h2>
                     </div>
                 </button>
-                <button onclick= "drinkselect2()" class="dish">
+                <button onclick="drinkselect2()" class="dish">
                     <div class="food"><img src="./coca-cola.png" /></div>
                     <div class="foodname">
                         <h1>Guaraná Lata</h1>
@@ -88,7 +88,7 @@
                         <h2>R$ 3.90</h2>
                     </div>
                 </button>
-                <button onclick= "drinkselect3()" class="dish">
+                <button onclick="drinkselect3()" class="dish">
                     <div class="food"><img src="./coca-cola.png" /></div>
                     <div class="foodname">
                         <h1>Fanta Lata</h1>
@@ -96,7 +96,7 @@
                         <h2>R$ 3.90</h2>
                     </div>
                 </button>
-                <button onclick= "drinkselect4()" class="dish">
+                <button onclick="drinkselect4()" class="dish">
                     <div class="food"><img src="./coca-cola.png" /></div>
                     <div class="foodname">
                         <h1>Coca cola 2L</h1>
@@ -104,7 +104,7 @@
                         <h2>R$ 6.90</h2>
                     </div>
                 </button>
-                <button onclick= "drinkselect5()" class="dish">
+                <button onclick="drinkselect5()" class="dish">
                     <div class="food"><img src="./coca-cola.png" /></div>
                     <div class="foodname">
                         <h1>Guaraná 2L</h1>
@@ -119,7 +119,7 @@
                 <h1>Por fim, sua sobremesa</h1>
             </div>
             <div class="dishes">
-                <button onclick= "desertselect1(pudim)" class="dish">
+                <button onclick="desertselect1(pudim)" class="dish">
                     <div class="food"><img src="./pudim.png" /></div>
                     <div class="foodname">
                         <h1>Pudim</h1>
@@ -127,28 +127,28 @@
                         <h2>R$ 7.90</h2>
                     </div>
                 </button>
-                <button onclick= "desertselect2()" class="dish">
+                <button onclick="desertselect2()" class="dish">
                     <div class="food"><img src="./pudim.png" /></div>
                     <div class="foodname">
                         <h1>Brigadeiro de Nutella</h1>
                         <p>Brigadeiro caseiro com nutella</p>
                         <h2>R$ 4.00</h2>
                     </div>
-                </button><button onclick= "desertselect3()" class="dish">
+                </button><button onclick="desertselect3()" class="dish">
                     <div class="food"><img src="./pudim.png" /></div>
                     <div class="foodname">
                         <h1>Bolo de Chocolate</h1>
                         <p>Fatia de Bolo de Chocolate recheado com nutella</p>
                         <h2>R$ 5.90</h2>
                     </div>
-                </button><button onclick= "desertselect4()" class="dish">
+                </button><button onclick="desertselect4()" class="dish">
                     <div class="food"><img src="./pudim.png" /></div>
                     <div class="foodname">
                         <h1>Sorvete</h1>
                         <p>Sorvete de flocos</p>
                         <h2>R$ 5.00</h2>
                     </div>
-                </button><button onclick= "desertselect5()" class="dish">
+                </button><button onclick="desertselect5()" class="dish">
                     <div class="food"><img src="./pudim.png" /></div>
                     <div class="foodname">
                         <h1>Doce de Leite</h1>
@@ -160,13 +160,10 @@
         </div>
     </div>
     <div class="infbar">
-        <button onclick= "">Selecione os 3 itens para fechar o pedido</button>
+        <button onclick="">Selecione os 3 itens para fechar o pedido</button>
     </div>
 
-    <script src="./script.js"> 
-        function foodselect1() {
-            alert("oi");
-        }</script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
