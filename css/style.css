@@ -8,13 +8,13 @@ body {
 }
 
 .header {
-    background-image: linear-gradient(to bottom right, rgb(235, 103, 175), rgb(255, 143, 227));
+    background-image: linear-gradient(to bottom right, #CF2B2B, rgb(252, 123, 123));
     width: 100%;
     height: 92px;
     position: fixed;
     top: 0px;
     left: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(61, 43, 43, 0.25));
     border-radius: 3px;
     border-bottom: 2px solid rgb(245, 196, 196);
     display: flex;
@@ -101,7 +101,8 @@ body {
 }
 
 .selected {
-    border: 3px solid purple;
+    border: 3px solid rgb(255, 88, 88);
+    filter: drop-shadow(2px 4px 4px rgba(255, 42, 42, 0.534));
 }
 
 .food img {
@@ -174,7 +175,8 @@ body {
 }
 
 .infbar button {
-    background-image: linear-gradient(to bottom right, rgb(253, 56, 165), rgb(253, 124, 221));
+    
+    background-image: linear-gradient(to bottom right, #CF2B2B, rgb(245, 56, 56));
     font-style: normal;
     border: 1px solid #a0a0a0;
     font-weight: 400;
@@ -202,10 +204,10 @@ body {
 }
 
 .box {
-    background-image: linear-gradient(to bottom right, rgb(253, 87, 178), rgb(250, 162, 228));
+    background-image: linear-gradient(to bottom right,#CF2B2B, rgb(247, 94, 94));
     filter: none;
     border-radius: 10px;
-    height: 377px;
+    height: 340px;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -235,13 +237,15 @@ body {
     line-height: 26px;
     line-height: 100%;
     color: white;
+    
 
 }
 
 .op {
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    align-items: center;
+
 }
 
 .op p {
@@ -262,7 +266,7 @@ body {
     line-height: 26px;
     line-height: 100%;
     letter-spacing: 1.8%;
-    color:rgb(253, 87, 178);
+    color:rgb(255, 38, 38);
     background-color:white;
     border-radius:100px;
     height: 52px;
@@ -285,4 +289,7 @@ body {
 
 .escondido {
     display: none;
+}
+.infbar button:disabled{
+    background-image: linear-gradient(to bottom right, #8f8f8f, rgb(190, 190, 190));
 }

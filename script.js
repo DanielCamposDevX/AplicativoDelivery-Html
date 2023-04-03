@@ -1,19 +1,3 @@
-const frango = 14.90;
-const carne = 20.90;
-const trio = 19.90;
-const batata = 15.90;
-const lasanha = 19;
-const coca = 4.90;
-const guarana = 3.90;
-const fanta = 3.90;
-const coca2 = 6.90;
-const guarana2 = 5.90;
-const pudim = 7.90;
-const brigadeiro = 4;
-const bolo = 5.90;
-const sorvete = 5;
-const doce = 6.90;
-
 function foodselect(food) {
     const botaoanterior = document.querySelector('.foods .selected');
     console.log(botaoanterior);
@@ -21,8 +5,16 @@ function foodselect(food) {
         botaoanterior.classList.remove('selected');
     }
 
-    const botao = document.querySelector(food);
-    botao.classList.add('selected');
+    const botao1 = document.querySelector(food);
+    botao1.classList.add('selected');
+    const botao2 = document.querySelector('.drinks .selected');
+    const botao3 = document.querySelector('.deserts .selected');
+    if (botao1 !== null && botao2 !== null && botao3 !== null) {
+        const enable = document.querySelector('.infbar button');
+        enable.innerHTML = 'Finalizar Pedido'
+        enable.disabled = false;
+    }
+
 }
 
 
@@ -32,8 +24,16 @@ function drinkselect(drink) {
     if (botaoanterior !== null) {
         botaoanterior.classList.remove('selected');
     }
-    const botao = document.querySelector(drink);
-    botao.classList.add('selected');
+    const botao2 = document.querySelector(drink);
+    botao2.classList.add('selected');
+    const botao1 = document.querySelector('.foods .selected');
+    const botao3 = document.querySelector('.deserts .selected');
+    if (botao1 !== null && botao2 !== null && botao3 !== null) {
+        enable = document.querySelector('.infbar button');
+        enable.innerHTML = 'Finalizar Pedido'
+        enable.disabled = false;
+    }
+
 }
 
 
@@ -43,8 +43,15 @@ function desertselect(desert) {
     if (botaoanterior !== null) {
         botaoanterior.classList.remove('selected');
     }
-    const botao = document.querySelector(desert);
-    botao.classList.add('selected');
+    const botao3 = document.querySelector(desert);
+    botao3.classList.add('selected');
+    const botao2 = document.querySelector('.drinks .selected');
+    const botao1 = document.querySelector('.foods .selected');
+    if (botao1 !== null && botao2 !== null && botao3 !== null) {
+        const enable = document.querySelector('.infbar button');
+        enable.innerHTML = 'Finalizar Pedido'
+        enable.disabled = false;
+    }
 }
 
 
@@ -73,7 +80,8 @@ function final() {
     p2.innerHTML = drink.innerHTML;
     p3.innerHTML = desert.innerHTML;
     let tot = document.querySelector('.confirm .box .op .total');
-    tot.innerHTML = total.toFixed(2);
+    tot.innerHTML = 'R$' + total.toFixed(2);
+
 }
 function back() {
     const botao = document.querySelector('.confirm');
@@ -81,6 +89,8 @@ function back() {
 }
 
 function wpp() {
+    const nome = prompt('Digite seu nome')
+    const endereco = prompt ( 'Digite seu endereço:')
     const a = document.querySelector('.confirmed');
     const foodname = document.querySelector('.foods .selected .foodname h1');
     const drinkname = document.querySelector('.drinks .selected .foodname h1');
@@ -89,7 +99,7 @@ function wpp() {
     const drink = document.querySelector('.drinks .selected .preco h2');
     const desert = document.querySelector('.deserts .selected .preco h2');
     const total = Number(food.innerHTML) + Number(drink.innerHTML) + Number(desert.innerHTML);
-    a.href = "https://wa.me/5532988757666?text=Ol%C3%A1%2C+gostaria+de+fazer+o+pedido%3A%0A-+Prato%3A+" + foodname.innerHTML + "%0A-+Bebida%3A+" + drinkname.innerHTML + "%0A-+Sobremesa%3A+" + desertname.innerHTML + "%0ATotal%3A+R%24+"+total.toFixed(2);
+    a.href = "https://wa.me/5532988757666?text=Ol%C3%A1%2C+gostaria+de+fazer+o+pedido%3A%0A-+Prato%3A+" + foodname.innerHTML + "%0A-+Bebida%3A+" + drinkname.innerHTML + "%0A-+Sobremesa%3A+" + desertname.innerHTML + "%0ATotal%3A+R%24+" + total.toFixed(2) + "Nome%3A" + nome + "%0AEndere%C3%A7o%3A" + endereco;
     window.location.href = a.href;
 }
 
