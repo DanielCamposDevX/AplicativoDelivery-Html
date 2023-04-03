@@ -99,7 +99,7 @@ function wpp() {
     const drink = document.querySelector('.drinks .selected .preco h2');
     const desert = document.querySelector('.deserts .selected .preco h2');
     const total = Number(food.innerHTML) + Number(drink.innerHTML) + Number(desert.innerHTML);
-    a.href = "https://wa.me/5532988757666?text=Ol%C3%A1%2C+gostaria+de+fazer+o+pedido%3A%0A-+Prato%3A+" + foodname.innerHTML + "%0A-+Bebida%3A+" + drinkname.innerHTML + "%0A-+Sobremesa%3A+" + desertname.innerHTML + "%0ATotal%3A+R%24+" + total.toFixed(2) + "Nome%3A" + nome + "%0AEndere%C3%A7o%3A" + endereco;
+    a.href = "https://wa.me/5532988757666?text=Ol%C3%A1%2C+gostaria+de+fazer+o+pedido%3A%0A-+Prato%3A+" + foodname.innerHTML + "%0A-+Bebida%3A+" + drinkname.innerHTML + "%0A-+Sobremesa%3A+" + desertname.innerHTML + "%0ATotal%3A+R%24+" + total.toFixed(2) + "%0ANome%3A" + nome + "%0AEndere%C3%A7o%3A" + endereco;
     window.location.href = a.href;
 }
 
